@@ -4,6 +4,9 @@ services:
     image: sakai
     ports:
       - "8080:8080"
+      - target: 8080
+        published: 9002
+        mode: host  
     configs:
       - source: sakai_config
         target: /usr/local/sakai/properties/sakai.properties
